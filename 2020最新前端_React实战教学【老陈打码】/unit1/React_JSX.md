@@ -53,7 +53,7 @@ ReactDOM.render(
 `index.js`
 
 ```js
-import * from 'style.css';
+import './style.css';
 
 let type = 'redBg';
 let logo = 'https://www.baidu.com/img/flexible/logo/pc/result.png';
