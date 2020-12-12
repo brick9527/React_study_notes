@@ -7,3 +7,4 @@
   - [1-4 React样式和注释](./2020最新前端_React实战教学【老陈打码】/unit1/React样式和注释.md)
   - [1-5 react组件](./2020最新前端_React实战教学【老陈打码】/unit1/react组件.md)
   - [1-6 react状态](./2020最新前端_React实战教学【老陈打码】/unit1/react状态.md)
+  - [2-1 react父传子数据传递](./2020最新前端_React实战教学【老陈打码】/unit2/react父传子数据传递.md)
