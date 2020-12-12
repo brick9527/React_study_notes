@@ -8,3 +8,4 @@
   - [1-5 react组件](./2020最新前端_React实战教学【老陈打码】/unit1/react组件.md)
   - [1-6 react状态](./2020最新前端_React实战教学【老陈打码】/unit1/react状态.md)
   - [2-1 react父传子数据传递](./2020最新前端_React实战教学【老陈打码】/unit2/react父传子数据传递.md)
+  - [2-2 react数据传递子传父](./2020最新前端_React实战教学【老陈打码】/unit2/react数据传递子传父.md)
