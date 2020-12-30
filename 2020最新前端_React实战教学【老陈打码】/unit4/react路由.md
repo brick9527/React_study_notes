@@ -124,3 +124,94 @@ class Main extends React.Component {
   }
 }
 ```
+
+## 重定向
+
+如果访问某个组件时，如果有重定向组件，那么就会修改页面路径，使得页面内容显示为所定向路径的内容：
+
+- 用例：
+
+```js
+import {BrowserRouter as Router, Link, Route, Redirect} from 'react-router-dom'
+function InfoPage(props) {
+  let content = null
+  if (props.location.state.isSuccess) {
+    content = (<Redirect to="/about"></Redirect>)
+  } else {
+    content = (<Redirect to="/login"></Redirect>)
+  }
+  return content
+}
+
+function FormPage(props) {
+  const obj = {
+    pathname: '/info',
+    state: {
+      isSuccess: true
+    }
+  }
+  return (
+    <div>
+      <h1>验证页面</h1>
+      <Link to={obj}>跳转info页面</Link>
+    </div>
+  )
+}
+
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <Route path="/" exact component={() => (<h1>首页</h1>)}></Route>
+        <Route path="/form" exact component={FormPage}></Route>
+        <Route path="/info" exact component={InfoPage}></Route>
+        <Route path="/about" exact component={() => (<h1>about</h1>)}></Route>
+        <Route path="/login" exact component={() => (<h1>login</h1>)}></Route>
+      </Router>
+    )
+  }
+}
+```
+
+## Switch组件
+
+让switch组件内容的route只匹配1个，只要匹配到了,剩余的路由规则将不再匹配。
+
+- 案例
+
+```js
+import {BrowserRouter as Router, Link, Route, Redirect, Switch} from 'react-router-dom'
+
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <Switch>
+          <Route path="/" exact component={() => (<h1>首页</h1>)}></Route>
+          <Route path="/form" exact component={FormPage}></Route>
+          <Route path="/info" exact component={InfoPage}></Route>
+          <Route path="/about" exact component={() => (<h1>about</h1>)}></Route>
+          <Route path="/login" exact component={() => (<h1>login</h1>)}></Route>
+        </Switch>
+      </Router>
+    )
+  }
+}
+```
+
+## 跳转
+
+```js
+this.props.history.push('/', { msg: 'helloworld' })
+this.props.history.replace('/', { msg: 'helloworld' })
+
+// 前进
+this.props.history.go(1)
+this.props.history.goForward()
+
+// 后腿
+this.props.history.go(-1)
+this.props.history.goBack()
+
+```
+
