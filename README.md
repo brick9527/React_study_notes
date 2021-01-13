@@ -19,4 +19,5 @@
   - [3-4 react的ajax实例(没什么好记的)](#)
   - [3-5 react疫情追踪案例(没什么好记的)](#)
   - [4-1 react插槽](./2020最新前端_React实战教学【老陈打码】/unit4/react插槽.md)
-  - [4-2 react路由](./2020最新前端_React实战教学【老陈打码】/unit4/react路由.md)
+  - [4-2~3 react路由](./2020最新前端_React实战教学【老陈打码】/unit4/react路由.md)
+  - [4-4 redux](./2020最新前端_React实战教学【老陈打码】/unit4/redux.md)
